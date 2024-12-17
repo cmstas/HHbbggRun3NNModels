@@ -1,0 +1,91 @@
+Data_EraE: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/Data_EraE.parquet"
+    lumi: 5672 # /pb
+
+Data_EraF: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/Data_EraF.parquet"
+    lumi: 17610 # /pb
+
+Data_EraG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/Data_EraG.parquet"
+    lumi: 3055 # /pb
+
+#signal
+#ggF HH xs = 0.03413 pb (@13.6 TeV) https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWGHH?redirectedfrom=LHCPhysics.LHCHXSWGHH#Latest_recommendations_for_gluon
+#H -> gg BR = 2.270E-03 https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR
+#H -> bb BR = 5.824E-01
+#Sample xs = 2*(ggF HH xs)(H -> gg BR)((H -> bb BR))
+GluGluToHH: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/GluGluToHH.parquet"
+    xs: 0.00009
+    
+#resonant background
+#H prod XS: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap#ggF_N3LO_QCD_NLO_EW
+#H -> gg BR = 2.270E-03: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/CERNYellowReportPageBR#Higgs_2_gauge_bosons
+GluGluHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/GluGluHToGG.parquet"
+    xs: 0.1186 #XS = 52.23
+
+ttHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/ttHToGG.parquet"
+    xs: 0.0013 #XS = 0.57
+
+VBFHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/VBFHToGG.parquet"
+    xs: 0.00926 #XS = 4.078
+
+VHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/VHToGG.parquet"
+    xs: 0.00545 #XS = 1.457 + 0.9439 = 2.401
+
+#continuous background
+GGJets: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/GGJets.parquet"
+    xs: 88.75 #https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS=%20%20GG-Box-3Jets_MGG-80_13p6TeV_sherpa
+    
+TTGG:
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/TTGG.parquet"
+    xs: 0.02391
+
+#GJetPt20To40: 
+#    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/GJetPt20To40.parquet"
+#    xs: 242.5 #https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS=%20%20GJet_PT-20to40_DoubleEMEnriched_MGG-80_TuneCP5_13p6TeV_pythia8
+#
+#GJetPt40: 
+#    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/GJetPt40.parquet"
+#    xs: 919.1 #https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=DAS=%20%20%20GJet_PT-40_DoubleEMEnriched_MGG-80_TuneCP5_13p6TeV_pythia8
+#
+#G-4Jets_HT_40to70:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-40to70_NOTAG_merged.parquet"
+#    xs: 15310
+#
+#G-4Jets_HT_70to100:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-70to100_NOTAG_merged.parquet"
+#    xs: 8111
+#
+#G-4Jets_HT_100to200:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-100to200_NOTAG_merged.parquet"
+#    xs: 7373
+#
+#G-4Jets_HT_200to400:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-200to400_NOTAG_merged.parquet"
+#    xs: 1539
+#
+#G-4Jets_HT_400to600:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-400to600_NOTAG_merged.parquet"
+#    xs: 167.7
+#
+#G-4Jets_HT_600:
+#    path: "/ceph/cms/store/user/joocain/Run3NRHH/MergedParquets/PrivateCannonical/Run3_2022postEE/G-4Jets_HT-600_NOTAG_merged.parquet"
+#    xs: 54.48
+
+DDQCDGJets:
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/DDQCDGJET.parquet"
+    xs: 1
+
+#QCD:
+#    #merging of: QCD_PT-40toInf_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8
+#    #QCD_PT-30to40_DoubleEMEnriched_MGG-80toInf_TuneCP5_13p6TeV_pythia8
+#    #QCD_PT-30toInf_DoubleEMEnriched_MGG-40to80_TuneCP5_13p6TeV_pythia8
+#    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022postEE/QCD.parquet"
+#    xs: 402850 #124700.0 + 25950.0 + 252200.0

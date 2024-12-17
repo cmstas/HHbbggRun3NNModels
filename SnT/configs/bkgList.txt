@@ -1,0 +1,7 @@
+GluGluHToGG
+ttHToGG
+VBFHToGG
+VHToGG
+GGJets
+DDQCDGJets
+TTGG
