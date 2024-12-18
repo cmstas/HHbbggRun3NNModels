@@ -1,0 +1,65 @@
+Data_EraC: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/Data_EraC.parquet"
+    lumi: 4953 # /pb
+
+Data_EraD: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/Data_EraD.parquet"
+    lumi: 2922 # /pb
+
+GGJets: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/GGJets.parquet"
+    xs: 88.75 #wrong: 108.3
+    nev_total: -1
+    sum_gen_weights: -1
+
+GJetPt20To40: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/GJetPt20To40.parquet"
+    xs: 242.5
+    nev_total: -1
+    sum_gen_weights: -1
+
+GJetPt40: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/GJetPt40.parquet"
+    xs: 919.1
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/GluGluHToGG.parquet"
+    xs: 0.1186
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluToHH: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/GluGluToHH.parquet"
+    xs: 0.00009
+    nev_total: 256837
+    sum_gen_weights: -1
+
+ttHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/ttHToGG.parquet"
+    xs: 0.0013 #0.5687
+    nev_total: -1
+    sum_gen_weights: -1
+
+VBFHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/VBFHToGG.parquet"
+    xs: 0.00926
+    nev_total: -1
+    sum_gen_weights: -1
+
+VHToGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/VHToGG.parquet"
+    xs: 0.00545
+    nev_total: -1
+    sum_gen_weights: -1
+    
+TTGG: 
+    path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/TTGG.parquet"
+    xs: 0.02391
+    nev_total: -1
+    sum_gen_weights: -1
+
+DDQCDGJets:
+  path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/DDQCDGJET.parquet"
+  xs: 1
