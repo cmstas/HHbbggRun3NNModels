@@ -218,6 +218,75 @@ def compositeVariables(input_variables, df_columns, df=None):
     "sublead_MVAID_WP90": {
       "dependencies": ["sublead_isScEtaEB", 'sublead_mvaID', "sublead_isScEtaEE"],
       "calculation": lambda df: (((df["sublead_isScEtaEB"] == True) & (df['sublead_mvaID'] > 0.0439603)) | ((df["sublead_isScEtaEE"] == True) & (df['sublead_mvaID'] > -0.249526))).astype(int)
+    },
+    # NW variables
+    "M_chi": {
+      "dependencies": ["HHbbggCandidate_mass", 'mass', "dijet_mass"],
+      "calculation": lambda df: df['HHbbggCandidate_mass'] - df['mass'] - df['dijet_mass'] + 2*124.9
+    },
+    "CosThetaStar_CS_abs": {
+      "dependencies": ["CosThetaStar_CS"],
+      "calculation": lambda df: np.abs(df['CosThetaStar_CS'])
+    },
+    "CosThetaStar_gg_abs": {
+      "dependencies": ["CosThetaStar_gg"],
+      "calculation": lambda df: np.abs(df['CosThetaStar_gg'])
+    },
+    "CosThetaStar_jj_abs": {
+      "dependencies": ["CosThetaStar_jj"],
+      "calculation": lambda df: np.abs(df['CosThetaStar_jj'])
+    },
+    "HHbbggCandidate_eta_abs": {
+      "dependencies": ["HHbbggCandidate_eta"],
+      "calculation": lambda df: np.abs(df['HHbbggCandidate_eta'])
+    },
+    "lead_eta_abs": {
+      "dependencies": ["lead_eta"],
+      "calculation": lambda df: np.abs(df['lead_eta'])
+    },
+    "sublead_eta_abs": {
+      "dependencies": ["sublead_eta"],
+      "calculation": lambda df: np.abs(df['sublead_eta'])
+    },
+    "eta_abs": {
+      "dependencies": ["eta"],
+      "calculation": lambda df: np.abs(df['eta'])
+    },
+    "lead_bjet_eta_abs": {
+      "dependencies": ["lead_bjet_eta"],
+      "calculation": lambda df: np.abs(df['lead_bjet_eta'])
+    },
+    "sublead_bjet_eta_abs": {
+      "dependencies": ["sublead_bjet_eta"],
+      "calculation": lambda df: np.abs(df['sublead_bjet_eta'])
+    },
+    "dijet_eta_abs": {
+      "dependencies": ["dijet_eta"],
+      "calculation": lambda df: np.abs(df['dijet_eta'])
+    },
+    "gg_pT_OverHHcand_mass": {
+      "dependencies": ["pt", "HHbbggCandidate_mass"],
+      "calculation": lambda df: df['pt'] / df['HHbbggCandidate_mass']
+    },
+    "jj_pT_OverHHcand_mass": {
+      "dependencies": ["dijet_pt", "HHbbggCandidate_mass"],
+      "calculation": lambda df: df['dijet_pt'] / df['HHbbggCandidate_mass']
+    },
+    "lead_g_pT_OverHggcand_mass": {
+      "dependencies": ["lead_pt", "HHbbggCandidate_mass"],
+      "calculation": lambda df: df['lead_pt'] / df['mass']
+    },
+    "lead_j_pT_OverHbbcand_mass": {
+      "dependencies": ["lead_bjet_pt", "dijet_mass"],
+      "calculation": lambda df: df['lead_bjet_pt'] / df['dijet_mass']
+    },
+    "sublead_g_pT_OverHggcand_mass": {
+      "dependencies": ["sublead_pt", "HHbbggCandidate_mass"],
+      "calculation": lambda df: df['sublead_pt'] / df['mass']
+    },
+    "sublead_j_pT_OverHbbcand_mass": {
+      "dependencies": ["sublead_bjet_pt", "dijet_mass"],
+      "calculation": lambda df: df['sublead_bjet_pt'] / df['dijet_mass']
     }
   }
 
