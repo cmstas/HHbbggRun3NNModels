@@ -135,7 +135,8 @@ if __name__=="__main__":
         print()
         print("Processing "+name)
         print("---------------")
-        skimAndAdd(sampleInfo[name][re]["path"], args.parquet_output+"/"+name+'_'+re+".parquet", args.variables_json, args.keep_all_features)
+        skimAndAdd("/eos/home-x/xuyan/public/HH2BBGG/parquet_central/"+("/".join(sampleInfo[name][re]["path"].split("/")[-2:])) if args.runOnLxplus
+                   else sampleInfo[name][re]["path"], args.parquet_output+"/"+name+'_'+re+".parquet", args.variables_json, args.keep_all_features)
 
   if not args.processOnly:
     print("###############")
