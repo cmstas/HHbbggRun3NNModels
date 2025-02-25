@@ -1,5 +1,18 @@
 { "input_variables":
   [
+    "VBF",
+    "boosted",
+    "fatjet1_pt",
+    "fatjet2_pt",
+    "fatjet3_pt",
+    "fatjet4_pt",
+    "fatjet1_particleNet_XbbVsQCD",
+    "fatjet2_particleNet_XbbVsQCD",
+    "fatjet3_particleNet_XbbVsQCD",
+    "fatjet4_particleNet_XbbVsQCD",
+    "VBF_first_jet_eta",
+    "VBF_second_jet_eta",
+    "VBF_dijet_mass",
     "lead_eta",
     "sublead_eta",
     "pholead_PtOverM",

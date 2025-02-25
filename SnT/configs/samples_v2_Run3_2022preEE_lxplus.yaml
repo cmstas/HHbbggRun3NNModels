@@ -1,0 +1,53 @@
+Data_EraC: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_data_2022preEE_RunCD/merged/Run2022C/NOTAG_merged.parquet"
+    lumi: 4953 # /pb
+
+Data_EraD: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_data_2022preEE_RunCD/merged/Run2022D/NOTAG_merged.parquet"
+    lumi: 2922 # /pb
+
+GGJets: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcGGJets_2022preEE/merged/GGJets/NOTAG_merged.parquet"
+    xs: 88.75
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluHToGG: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcSingleHiggs_2022preEE/merged/GluGluHToGG/NOTAG_merged.parquet"
+    xs: 0.1186
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluToHH: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcSignal_2022preEE/merged/GluGluToHH/NOTAG_merged.parquet"
+    xs: 0.00009
+    nev_total: 256837
+    sum_gen_weights: -1
+
+ttHToGG: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcSingleHiggs_2022preEE/merged/ttHToGG/NOTAG_merged.parquet"
+    xs: 0.0013 #0.5687
+    nev_total: -1
+    sum_gen_weights: -1
+
+VBFHToGG: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcSingleHiggs_2022preEE/merged/VBFHToGG/NOTAG_merged.parquet"
+    xs: 0.00926
+    nev_total: -1
+    sum_gen_weights: -1
+
+VHToGG: 
+    path: "/eos/home-e/evourlio/HiggsDNA/samples_mcSingleHiggs_2022preEE/merged/VHToGG/NOTAG_merged.parquet"
+    xs: 0.00545
+    nev_total: -1
+    sum_gen_weights: -1
+    
+# TTGG: 
+    # path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/TTGG.parquet"
+    # xs: 0.02391
+    # nev_total: -1
+    # sum_gen_weights: -1
+
+# DDQCDGJets:
+  # path: "/eos/home-x/xuyan/public/HH2BBGG/parquet_central/Run3_2022preEE/DDQCDGJET.parquet"
+  # xs: 1

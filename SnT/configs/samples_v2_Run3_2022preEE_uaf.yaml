@@ -1,0 +1,53 @@
+Data_EraC: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/Run2022C_with_full_PNet_info.parquet"
+    lumi: 4953 # /pb
+
+Data_EraD: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/Run2022D_with_full_PNet_info.parquet"
+    lumi: 2922 # /pb
+
+GGJets: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/GGJets_with_full_PNet_info.parquet"
+    xs: 88.75
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluHToGG: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/GluGluHToGG_with_full_PNet_info.parquet"
+    xs: 0.1186
+    nev_total: -1
+    sum_gen_weights: -1
+
+GluGluToHH: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/GluGluToHH_with_full_PNet_info.parquet"
+    xs: 0.00009
+    nev_total: 256837
+    sum_gen_weights: -1
+
+ttHToGG: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/ttHToGG_with_full_PNet_info.parquet"
+    xs: 0.0013 #0.5687
+    nev_total: -1
+    sum_gen_weights: -1
+
+VBFHToGG: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/VBFHToGG_with_full_PNet_info.parquet"
+    xs: 0.00926
+    nev_total: -1
+    sum_gen_weights: -1
+
+VHToGG: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/VHToGG_with_full_PNet_info.parquet"
+    xs: 0.00545
+    nev_total: -1
+    sum_gen_weights: -1
+    
+TTGG: 
+    path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/TTGG_with_full_PNet_info.parquet"
+    xs: 0.02391
+    nev_total: -1
+    sum_gen_weights: -1
+
+DDQCDGJets:
+  path: "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/2022preEE/DDQCDGJET_with_full_PNet_info.parquet"
+  xs: 1
