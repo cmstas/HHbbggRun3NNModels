@@ -1,4 +1,4 @@
 {
-    "Run3_2022postEE":"configs/samples_v1_Run3_2022postEE.yaml",
-    "Run3_2022preEE":"configs/samples_v1_Run3_2022preEE.yaml"
+    "Run3_2022postEE":"configs/samples_v2_Run3_2022postEE_uaf.yaml",
+    "Run3_2022preEE":"configs/samples_v2_Run3_2022preEE_uaf.yaml"
 }

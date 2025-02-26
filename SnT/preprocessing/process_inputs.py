@@ -54,16 +54,18 @@ def skimAndAdd(parquet_input, parquet_output, variables_json, keep_all_features,
   with open(variables_json, "r") as f_var:
     input_variables = json.load(f_var)["input_variables"]
   # We need to recalculate min and max mvaID because some of the inputs files may not be pre-selected and we need to apply the mvaID preselection here
-  input_variables += [var for var in ["Max_mvaID", "Min_mvaID", "lead_isScEtaEB", "lead_isScEtaEE", "sublead_isScEtaEB", "sublead_isScEtaEE"] if var not in input_variables]
+  input_variables += [var for var in ["Max_mvaID", "Min_mvaID", "lead_isScEtaEB", "lead_isScEtaEE", "sublead_isScEtaEB", "sublead_isScEtaEE","fatjet1_particleNet_XbbVsQCD", "fatjet2_particleNet_XbbVsQCD","fatjet3_particleNet_XbbVsQCD", "fatjet4_particleNet_XbbVsQCD","fatjet1_pt", "fatjet2_pt", "fatjet3_pt", "fatjet4_pt","VBF_first_jet_eta", "VBF_second_jet_eta", "VBF_dijet_mass"] if var not in input_variables]
+  
   skimmedVariables = []
-  if not keep_all_features: skimmedVariables = compositeVariables(input_variables, pf_columns)
+  if not keep_all_features: skimmedVariables = compositeVariables(input_variables, pf_columns, df= None)
+  print("Variables that exist in the dataframe...")
   print(skimmedVariables)
 
   print()
   print("Constructing the dataframe...")
   df = pd.DataFrame()
   for batch in pf.iter_batches(batch_size = BATCH_SIZE, columns = None if keep_all_features else skimmedVariables + ["mass", "weight"]):
-    df_batch = pa.Table.from_batches([batch]).to_pandas() 
+    df_batch = pa.Table.from_batches([batch]).to_pandas()
     df_batch = compositeVariables(input_variables, pf_columns, df = df_batch)
     df = pd.concat([df, df_batch], ignore_index=True)
 
@@ -103,7 +105,7 @@ if __name__=="__main__":
   parser.add_argument('--runOnLxplus', action="store_true", default=False)
 
   args = parser.parse_args()
-  
+
   conf_file = 'configs/run_eras.json'
   if args.runOnLxplus:
     conf_file = 'configs/run_eras_lxplus.json'
@@ -135,8 +137,7 @@ if __name__=="__main__":
         print()
         print("Processing "+name)
         print("---------------")
-        skimAndAdd("/eos/home-x/xuyan/public/HH2BBGG/parquet_central/"+("/".join(sampleInfo[name][re]["path"].split("/")[-2:])) if args.runOnLxplus
-                   else sampleInfo[name][re]["path"], args.parquet_output+"/"+name+'_'+re+".parquet", args.variables_json, args.keep_all_features)
+        skimAndAdd(sampleInfo[name][re]["path"] if args.runOnLxplus else "/home/users/xuyan/HH2ggbb/parquets/v2_PNet/"+("/".join(sampleInfo[name][re]["path"].split("/")[-2:])),args.parquet_output+"/"+name+'_'+re+".parquet", args.variables_json, args.keep_all_features)
 
   if not args.processOnly:
     print("###############")
